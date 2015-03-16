@@ -17,7 +17,7 @@ io.sockets.on('connection', function (socket) {
     });
 
     socket.on('message', function (data) {
-        console.log(colors[data.color](data.userName + ": " + data.message));
+        console.log(colors[data.color](data.user + ": " + data.message));
         io.sockets.emit('message', data);
         messages.push(data);
     });

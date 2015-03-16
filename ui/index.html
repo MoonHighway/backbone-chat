@@ -27,14 +27,14 @@
 
     <title>Simple Chat</title>
 
-    <!-- Name Form Template -->
-    <script id="tpl-name-form" type="text/template">
+    <!-- Chat Name Form Template -->
+    <script id="tpl-chat-name" type="text/template">
         <div class="col-xs-offset-1 col-xs-10 col-xs-offset-1">
             <div class="input-group">
-                <input class="form-control input-lg" type="text" placeholder="What is your name..." value="{{name}}" />
-        <span class="input-group-btn">
-        <button class="btn btn-lg btn-success">Connect</button>
-        </span>
+                <input id="user-name" class="form-control input-lg" type="text" placeholder="What is your name..." />
+                <span class="input-group-btn">
+                    <button id="connect" class="btn btn-lg btn-success">Connect</button>
+                </span>
             </div>
         </div>
     </script>
@@ -42,13 +42,17 @@
     <!-- Chat View Template -->
     <script id="tpl-chat" type="text/template">
         <div class="col-xs-offset-1 col-xs-10 col-xs-offset-1 bg-success">Connected</div>
-        <div id="chat-target" class="col-xs-offset-1 col-xs-10 col-xs-offset-1"></div>
+        <div id="chat-target" class="col-xs-offset-1 col-xs-10 col-xs-offset-1">
+            {{#each messages}}
+            <div style="color: {{color}}">{{user}}: {{message}}</div>
+            {{/each}}
+        </div>
         <form action="javascript:void(0)" class="col-xs-offset-1 col-xs-10 col-xs-offset-1">
             <div class="input-group">
-                <input class="form-control input-lg" type="text" placeholder="enter chat message..." />
-        <span class="input-group-btn">
-        <button class="btn btn-lg btn-primary">Send</button>
-        </span>
+                <input id="new-message" class="form-control input-lg" type="text" placeholder="enter chat message..." />
+                <span class="input-group-btn">
+                    <button id="send" class="btn btn-lg btn-primary">Send</button>
+                </span>
             </div>
         </form>
     </script>
@@ -62,9 +66,12 @@
 
 <div id="target"></div>
 
-<script src="/js/Models.js"></script>
-<script src="/js/Views.js"></script>
-<script src="/js/App.js"></script>
+<script src="/js/MessageModel.js"></script>
+<script src="/js/ConnectionModel.js"></script>
+<script src="/js/MessageCollection.js"></script>
+<script src="/js/ChatView.js"></script>
+<script src="/js/AppRouter.js"></script>
+<script src="/js/main.js"></script>
 
 </body>
 </html>
