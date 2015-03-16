@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no" />
+    <meta charset="utf-8">
+
+    <!-- jQuery -->
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+    <!-- Backbone -->
+    <script src="//jashkenas.github.io/underscore/underscore-min.js"></script>
+    <script src="//jashkenas.github.io/backbone/backbone-min.js"></script>
+
+    <!-- Local Stylesheet -->
+    <link rel="stylesheet" href="/css/style.css" type="text/css" />
+
+    <!-- Socket.io Client -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.5/socket.io.min.js"></script>
+
+    <!-- Handlebars -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0/handlebars.js"></script>
+
+    <title>Simple Chat</title>
+
+    <!-- Name Form Template -->
+    <script id="tpl-name-form" type="text/template">
+        <div class="col-xs-offset-1 col-xs-10 col-xs-offset-1">
+            <div class="input-group">
+                <input class="form-control input-lg" type="text" placeholder="What is your name..." value="{{name}}" />
+        <span class="input-group-btn">
+        <button class="btn btn-lg btn-success">Connect</button>
+        </span>
+            </div>
+        </div>
+    </script>
+
+    <!-- Chat View Template -->
+    <script id="tpl-chat" type="text/template">
+        <div class="col-xs-offset-1 col-xs-10 col-xs-offset-1 bg-success">Connected</div>
+        <div id="chat-target" class="col-xs-offset-1 col-xs-10 col-xs-offset-1"></div>
+        <form action="javascript:void(0)" class="col-xs-offset-1 col-xs-10 col-xs-offset-1">
+            <div class="input-group">
+                <input class="form-control input-lg" type="text" placeholder="enter chat message..." />
+        <span class="input-group-btn">
+        <button class="btn btn-lg btn-primary">Send</button>
+        </span>
+            </div>
+        </form>
+    </script>
+
+</head>
+<body>
+
+<header>
+    <h1>Chat Together</h1>
+</header>
+
+<div id="target"></div>
+
+<script src="/js/Models.js"></script>
+<script src="/js/Views.js"></script>
+<script src="/js/App.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+body, html, div#target {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative
+}
+
+header {
+    background-color: black;
+    color: yellow;
+    text-align: right;
+}
+
+header {
+    margin-bottom: 15px;
+}
+
+header>h1 {
+    font-family: Arial;
+    padding: .2em;
+    margin: 0;
+}
+
+#chat-view {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    margin: 0;
+}
+
+#chat-view>#chat-target {
+    height: 80%;
+    position: relative;
+    border: solid 1px #AAA;
+    border-radius: .2em;
+    overflow: scroll;
+    padding-bottom: 100px;
+}
+
+#chat-view>form {
+    height: 20%;
+    position: absolute;
+    bottom: 0;
+    padding: 0;
+}
+
+#chat-view>div {
+    font-size: 2em;
+}
