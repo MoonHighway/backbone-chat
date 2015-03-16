@@ -1,7 +1,7 @@
 Backbone Chat
 =============
-A chat application built with Backbone js and Socket io.  This is a simple application designed ot be used
-as an exercise in MoonHighway ILT training.
+A chat application built with Backbone js and Socket io.  This is a simple application designed to be used
+as a hands on exercise in ILT training.
 
 Installation
 ------------
