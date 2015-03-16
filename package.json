@@ -1,6 +1,6 @@
 {
   "name": "backbone-chat",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "A simple chat application built using socket.io and backbone to introduce engineers to socket.io.",
   "main": "server.js",
   "scripts": {
