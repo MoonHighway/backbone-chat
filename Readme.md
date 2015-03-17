@@ -18,6 +18,3 @@ or run with node-dev using:
         $ npm run devstart
 
 3. Open the web browser to: [http://localhost:3210](http://localhost:3210)
-
-        $ npm start
-        
