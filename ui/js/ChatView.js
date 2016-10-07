@@ -1,5 +1,5 @@
 var ChatView = Backbone.View.extend({
-    tagName: 'div id="chat-view"',
+    tagName: 'chat-view',
     chatTemplate: Handlebars.compile( $('#tpl-chat').html() ),
     nameTemplate: Handlebars.compile( $('#tpl-chat-name').html() ),
     events: {
